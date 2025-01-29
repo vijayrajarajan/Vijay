@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+void fibonacci(int n) {
+    int a = 0, b = 1, next;
+
+    if (n >= 1) printf("%d ", a);
+    if (n >= 2) printf("%d ", b);
+
+    for (int i = 3; i <= n; i++) {
+        next = a + b;
+        printf("%d ", next);
+        a = b;
+        b = next;
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+    
+    // Input number of terms
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    // Generate Fibonacci sequence
+    if (n <= 0)
+        printf("Enter a positive integer.\n");
+    else
+        fibonacci(n);
+
+    return 0;
+}
+ALGORITHM :
+
+1. Handle Edge Cases: If n = 1, print 0. If n = 2, print 0 1.
+
+
+2. Use Iteration: Start with a = 0 and b = 1, then calculate next = a + b.
+
+
+3. Loop for Additional Terms: Update a and b and print the sequence up to n terms.
+
+
+4. Efficient Approach: Uses O(n) time and O(1) space, avoiding recursion overhead.
