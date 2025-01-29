@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float P, R, T, SI;
+
+    // Input values
+    printf("Enter Principal, Rate, and Time: ");
+    scanf("%f %f %f", &P, &R, &T);
+
+    // Calculate Simple Interest
+    SI = (P * R * T) / 100;
+
+    // Display result
+    printf("Simple Interest = %.2f\n", SI);
+
+    return 0;
+}
+ALGORITHM:
+
+1. Takes input for Principal (P), Rate (R), and Time (T).
+
+
+2. Computes Simple Interest using the formula SI = (P * R * T) / 100.
+
+
+3. Displays the result, formatted to two decimal places for clarity.
