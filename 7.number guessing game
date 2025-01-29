@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int secret, guess;
+    
+    srand(time(0));  
+    secret = rand() % 100 + 1;  
+
+    printf("Guess a number between 1 and 100: ");
+    
+    while (1) {
+        scanf("%d", &guess);
+        if (guess < secret) 
+            printf("Higher!\n");
+        else if (guess > secret) 
+            printf("Lower!\n");
+        else {
+            printf("Correct! You guessed it!\n");
+            break;
+        }
+    }
+    
+    return 0;
+}
+ALGORITHM:
+
+1. Generate Random Number: Uses rand() % 100 + 1 to pick a number between 1 and 100.
+
+
+2. Loop Until Correct Guess: The user keeps guessing until they find the number.
+
+
+3. Provide Hints: Displays "Higher" or "Lower" based on the guess.
+
+
+4. Efficient & Short Code: Uses a while (1) loop and breaks when the correct number is guessed.
