@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+// Function to calculate factorial using recursion
+long long factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0)
+        printf("Factorial is not defined for negative numbers.\n");
+    else
+        printf("Factorial of %d is %lld\n", num, factorial(num));
+
+    return 0;
+}
+ALGORITHM:1
+
+Base Case: If n is 0 or 1, return 1 (since 0! = 1! = 1).
+
+
+2. Recursive Case: If n > 1, return n * factorial(n - 1).
+
+
+3. User Input Handling: The program asks for an integer input.
+
+
+4. Validation: If the user enters a negative number, it displays an error message.
+
+
+5. Output: The calculated factorial is 
