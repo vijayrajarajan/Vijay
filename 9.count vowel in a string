@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int count = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str); // Reads input including spaces
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]); // Convert to lowercase
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+            count++;
+    }
+
+    printf("Number of vowels: %d\n", count);
+    return 0;
+}
+
+ALGORITHM:
+
+1. Takes input: Reads a string, including spaces.
+
+
+2. Converts characters to lowercase: Ensures case insensitivity.
+
+
+3. Checks each character: Counts vowels (a, e, i, o, u).
+
+
+4. Displays the count of vowels in the string
